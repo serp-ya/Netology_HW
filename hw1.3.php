@@ -36,18 +36,16 @@ foreach ($Earth as $continent => $animalNames) {
 	foreach ($animalNames as $animalName) {
 		$animals = [];
 		$str = explode(' ', $animalName);
-		$animals[] = explode(' ', $animalName);
+		$animals[] = $str;
+		if (count($str)==2) {
+			$glue = implode(',', $str);
+			$replace = str_replace(',', ' ', $glue);
+			$two_words_name[$continent][] = $replace;
 
-		foreach ($animals as $words) {
-			if (count($words) ===2) {
-				$glue = implode(',', $words);
-				$replace = str_replace(',', ' ', $glue);
-				$two_words_name[$continent][] = $replace;
-			}
 		}
     }
 }
-
+        
 
 // Разбиваем массив с 2-мя словами на 2 массива
 
