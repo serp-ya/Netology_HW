@@ -28,7 +28,12 @@ if($data){
         echo "Температура: " . $day->main->temp . "<br/>";
         echo "Скорость ветра: " . $day->wind->speed . "<br/>";
         echo "Погода: " . $day->weather[0]->description  ;
-        echo "<img src='http://image.flaticon.com/icons/png/512/263/263351.png' width=30 height=30>" . "<br/>";
+        if ($day->weather[0]->description == snow) {
+           echo "<img src='http://image.flaticon.com/icons/png/512/263/263351.png' width=30 height=30>" . "<br/>";
+        }elseif ($day->weather[0]->description == "Sky is Clear") {
+            echo "<img src='https://www.flaticon.com/premium-icon/icons/png/512/193/193695.png' width=30 height=30>" . "<br/>";
+        }
+        echo "<br/>";
         echo "Давление: " . $day->main->pressure . "<br/>";
         echo "<hr/>";
     }
