@@ -28,10 +28,12 @@ $Earth = [
 ];
 
 
-//Создаем 2 массива с 1 и 2 словом названия животного
+//Массив из животных содержащих 2 слова в имени
+
 
 $first = [];
 $second = [];
+
 
 foreach ($Earth as $continent => $animalNames) {
 	foreach ($animalNames as $animalName) {
@@ -44,25 +46,23 @@ foreach ($Earth as $continent => $animalNames) {
 		}
     }
 }
-   
 
 shuffle($second);
 
 // Создаем новый массив и мешаем 1 и 2 слово
 
 $mixedAnimals = [];
-$i = 0;
+
 foreach ($first as $continent => $animalNames) {
 	foreach ($animalNames as $animalName) {
-		$mixedAnimals[$continent][] = $animalName . ' ' . $second[$i++];
+		$mixedAnimals[$continent][] = $animalName . ' ' . array_shift($second);
 	}
 }
- 
+
 // Вывод форматированного массива
 
 foreach ($mixedAnimals as $continent => $animalNames) {
 	echo "<h2>$continent</h2>";
 	echo (implode(", ", $animalNames)) . ".";
 }
-
-
+ 
