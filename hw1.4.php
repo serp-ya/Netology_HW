@@ -28,10 +28,16 @@ if($data){
         echo "Температура: " . $day->main->temp . "<br/>";
         echo "Скорость ветра: " . $day->wind->speed . "<br/>";
         echo "Погода: " . $day->weather[0]->description  ;
-        if ($day->weather[0]->description === snow||"light snow") {
-           echo "<img src='http://image.flaticon.com/icons/png/512/263/263351.png' width=30 height=30 ;>" . "<br/>";
+        if ($day->weather[0]->description === snow) {
+           echo "<img src='https://image.flaticon.com/icons/svg/106/106043.svg' width=30 height=30 >" . "<br/>";
         }elseif ($day->weather[0]->description == "Sky is Clear") {
-            echo "<img src='https://www.flaticon.com/premium-icon/icons/png/512/193/193695.png' width=30 height=30>" . "<br/>";
+            echo "<img src='https://image.flaticon.com/icons/svg/106/106061.svg' width=30 height=30>" . "<br/>";
+        }elseif ($day->weather[0]->description == "light snow"){
+             echo "<img src='https://image.flaticon.com/icons/svg/106/106056.svg' width=30 height=30>" . "<br/>";
+        }elseif ($day->weather[0]->description == "broken clouds"){
+            echo "<img src='https://image.flaticon.com/icons/svg/106/106064.svg' width=30 height=30>" . "<br/>";
+        }elseif ($day->weather[0]->description == "scattered clouds"){
+            echo "<img src='https://image.flaticon.com/icons/svg/106/106064.svg' width=30 height=30>" . "<br/>";
         }
         echo "<br/>";
         echo "Давление: " . $day->main->pressure . "<br/>";
