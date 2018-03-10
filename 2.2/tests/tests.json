@@ -1,0 +1,20 @@
+
+{	"question": "Сколько будет 1+1:",
+	"input":[{
+
+		"name":"1",
+		"value": "f"
+	    },{
+	    "value": "r",
+		"name":"2"
+		},{
+	    "value": "f",
+		"name":"3"
+		},{
+	    "value": "f",
+		"name":"4"
+		}],
+	
+	
+
+}

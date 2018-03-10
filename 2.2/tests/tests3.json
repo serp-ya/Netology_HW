@@ -1,0 +1,17 @@
+{	"question": "Сколько будет 3+2:",
+	"input":[{
+	    "value": "f",
+		"name":"1"
+	},{
+	   "value": "f",
+		"name":"2"
+		},{
+	    "value": "f",
+		"name":"3"
+		},{
+	   "value": "r",
+		"name":"5"
+		}],
+	
+
+}
