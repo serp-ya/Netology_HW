@@ -1,4 +1,20 @@
 <?php 
+//проверка на прохождение теста
+$var = empty($_POST);
+
+
+if ($var == true) {
+	echo "Вы еще не прошли тест";
+	
+}else{
+	$ot = 0;
+    if ($_POST[a1] == r){$ot++;} else {$not++;}
+    if ($_POST[a2] == r){$ot++;} else {$not++;}
+    if ($_POST[a3] == r){$ot++;} else {$not++;}
+    echo"<center>Вы прошли тест на <strong>$ot</strong> балла </center>";
+}
+
+// полчение теста из list.php
 $a = $_GET['testname'];
 $file = file_get_contents($a); 
 $fileDecode = json_decode($file, true); 
@@ -11,20 +27,8 @@ echo '</pre>';
 echo '<pre>';
 print_r($fileDecode);
 echo '</pre>';
+ 
 */
-
-//Выполянем проверку
-$ot = 0;
-$not = 0;
-if (isset($_POST)) {
-	if ($_POST[a1] == r){$ot++;} else {$not++;}
-      if ($_POST[a2] == r){$ot++;} else {$not++;}
-      if ($_POST[a3] == r){$ot++;} else {$not++;}
-
-}
-
-  
-
 
      
 ?>
@@ -56,7 +60,5 @@ if (isset($_POST)) {
 		<input type="submit" value="Проверить">
 	
 </form>
-<p>Правильных ответов: <?php echo $ot; ?></p>
-<p>Неправильных ответов: <?php echo $not; ?></p>
 </body>
 </html>
