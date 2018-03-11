@@ -1,59 +1,59 @@
 
-[{	"question": "Сколько будет 3+1:",
+[{	"question": "Сколько будет 4+1:",
 	"input":[{
 
 		"answer":"1",
 		"value": "f",
 		"name": "a1"
 	    },{
-	    "value": "f",
-		"answer":"2",
+	    "value": "r",
+		"answer":"5",
 		"name": "a1"
 		},{
 	    "value": "f",
 		"answer":"3",
 		"name": "a1"
 		},{
-	    "value": "r",
+	    "value": "f",
 		"answer":"4",
 		"name": "a1"
 		}]
-},{"question": "Сколько будет 3+2:",
+},{"question": "Сколько будет 4+2:",
 	"input":[{
 
-		"answer":"6",
+		"answer":"1",
 		"value": "f",
 		"name": "a2"
 	    },{
+	    "value": "f",
+		"answer":"2",
+		"name": "a2"
+		},{
 	    "value": "r",
-		"answer":"5",
+		"answer":"6",
 		"name": "a2"
 		},{
 	    "value": "f",
 		"answer":"4",
 		"name": "a2"
-		},{
-	    "value": "f",
-		"answer":"7",
-		"name": "a2"
 		}]
-	},{"question": "Сколько будет 3+3:",
+	},{"question": "Сколько будет 4+3:",
 	"input":[{
 
-		"answer":"7",
+		"answer":"1",
 		"value": "f",
 		"name": "a3"
 	    },{
 	    "value": "f",
-		"answer":"8",
-		"name": "a3"
-		},{
-	    "value": "r",
-		"answer":"6",
+		"answer":"2",
 		"name": "a3"
 		},{
 	    "value": "f",
-	    "answer":"9",
+		"answer":"3",
+		"name": "a3"
+		},{
+	    "value": "r",
+	    "answer":"7",
 		"name": "a3"
 		}]
 	}

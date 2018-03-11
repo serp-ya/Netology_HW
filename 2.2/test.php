@@ -3,55 +3,60 @@ $a = $_GET['testname'];
 $file = file_get_contents($a); 
 $fileDecode = json_decode($file, true); 
  
-/* 
+/*
 echo '<pre>';
 var_dump($file);
 echo '</pre>';
- 
+
 echo '<pre>';
-var_dump($fileDecode);
+print_r($fileDecode);
 echo '</pre>';
 */
 
-$label = $fileDecode['question'];
-$var = $fileDecode['input'];
-
+//Выполянем проверку
 $ot = 0;
 $not = 0;
+if (isset($_POST)) {
+	if ($_POST[a1] == r){$ot++;} else {$not++;}
+      if ($_POST[a2] == r){$ot++;} else {$not++;}
+      if ($_POST[a3] == r){$ot++;} else {$not++;}
 
-if ($_POST[a1] === 'r'){$ot++;} else {$not++;}
+}
+
+  
+
+
      
 ?>
-
 
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Тестирование</title>
 </head>
 <body>
-	<p>Решите пример</p>
-<form  method="POST">
-	<fieldset>
-		<legend><?= $label ?></legend>
-		<?php foreach ($var as  $value['name']) {
-		     ?>
-			<label >
-			<input type="radio" name="a1" value="<?php echo $value['name']['value']?>">
-			<?= $value['name']['name'] ?>
+	<p>Решите тест:</p>
+<form method="POST">
+	
+		<?php foreach ($fileDecode as  $value) { ?>
 		
-    		</label>
+		<fieldset>
 
-			<?php  }?>
+		<legend><?= $label = $value['question'] ?></legend>
+				
+				<?php foreach ($value['input'] as $key => $it) { ?>
+					<input type="radio" name="<?php echo $it['name']?>" value="<?php echo $it['value']?>">
+				<?= $it['answer'] ?>
+				<?php } ?>
 		
-	</fieldset>
-
-    <button type="submit">Проверить</button>
-
+		</fieldset>
+		
+		<?php }?>
+		
+		<input type="submit" value="Проверить">
+	
 </form>
-
 <p>Правильных ответов: <?php echo $ot; ?></p>
 <p>Неправильных ответов: <?php echo $not; ?></p>
-
 </body>
 </html>
