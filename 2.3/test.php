@@ -4,7 +4,7 @@
 
 
 
-// полчение теста из list.php
+// полчение теста из list.php и проверка на существование теста
 if (file_exists($_GET['testname'])) {
 	$a = $_GET['testname'];
    $file = file_get_contents($a);
@@ -12,7 +12,7 @@ if (file_exists($_GET['testname'])) {
 
 }else{
 	
-	header("HTTP/1.1 404 Not Found");
+	http_response_code(404);
     echo "Not found";
     die();
 }
