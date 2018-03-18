@@ -1,0 +1,36 @@
+content{
+    border: 1px solid;
+    width: 600px;
+    margin: 0 auto;
+}
+
+h2{
+	
+	text-align: center;
+
+}
+
+
+.news{
+    border: 3px solid orange;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.title{
+
+    color: red;
+    font-size: 18px;
+}
+
+.title, .description{
+    
+    padding-bottom: 10px;
+}
+
+
+.inline-block{
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+}
