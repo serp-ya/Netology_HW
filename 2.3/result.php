@@ -3,16 +3,19 @@ define(RIGHT_ANSWER, 'r');
 
 $ot = 0;
 
-if ($_POST[a1] == RIGHT_ANSWER)
+if ($_POST[a1] == RIGHT_ANSWER){
 	$ot++;
+}
  
 
-if ($_POST[a2] == RIGHT_ANSWER)
+if ($_POST[a2] == RIGHT_ANSWER){
 	$ot++;
+}
 
 
-if ($_POST[a3] == RIGHT_ANSWER)
+if ($_POST[a3] == RIGHT_ANSWER){
 	$ot++;
+}
 
     
 
