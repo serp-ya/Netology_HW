@@ -23,7 +23,6 @@ if ($_POST['a3'] == RIGHT_ANSWER){
 
 
 $name = $_POST['name'];
-$result = $_POST['result'];
 $im =  imagecreatefrompng('img/sert.png');
 
 $orange = imagecolorallocate($im, 238,122,28);

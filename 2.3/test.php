@@ -1,9 +1,6 @@
 <?php 
 
 
-
-
-
 // полчение теста из list.php и проверка на существование теста
 if (file_exists($_GET['testname'])) {
 	$a = $_GET['testname'];
@@ -16,12 +13,6 @@ if (file_exists($_GET['testname'])) {
     echo "Not found";
     die();
 }
-
-
-
-
-	
-
 
  
 /*
