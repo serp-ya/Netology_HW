@@ -7,39 +7,48 @@ class News{
     private $author;
     private $description;
    
-    public function setTitle($title){
+    public function setTitle($title)
+    {
         $this->title = $title;
     }
    
-    public function getTitle(){
+    public function getTitle()
+    {
         return $this->title;
     }
    
-    public function setDate($date){
+    public function setDate($date)
+    {
         $this->date = $date;
     }
    
-    public function getDate(){
+    public function getDate()
+    {
         return $this->date;
     }
    
-    public function setAuthor($author){
+    public function setAuthor($author)
+    {
         $this->author = $author;
     }
    
-    public function getAuthor(){
+    public function getAuthor()
+    {
         return $this->author;
     }
    
-    public function setDescription($description){
+    public function setDescription($description)
+    {
         $this->description = $description;
     }
    
-    public function getDescription(){
+    public function getDescription()
+    {
         return $this->description;
     }
  
-    public function getJson($fileName){
+    public function getJson($fileName)
+    {
         $json = file_get_contents($fileName);
         $data = json_decode($json, true);
         $news = new News();
@@ -65,8 +74,8 @@ $catalog = scandir(__DIR__ . '/article');
         <h2>Последние новости</h2>
         <?php
             $ob1 = new News();
-            foreach($catalog as $file){
-                if(pathinfo($file, PATHINFO_EXTENSION) == 'json'){
+            foreach ($catalog as $file) {
+                if (pathinfo($file, PATHINFO_EXTENSION) == 'json') {
                     $json = $ob1->getJson('article/' .$file);
                    
                     echo '<div class="news">';

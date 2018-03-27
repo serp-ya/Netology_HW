@@ -5,9 +5,7 @@ content{
 }
 
 h2{
-	
 	text-align: center;
-
 }
 
 
@@ -18,13 +16,11 @@ h2{
 }
 
 .title{
-
     color: red;
     font-size: 18px;
 }
 
 .title, .description{
-    
     padding-bottom: 10px;
 }
 
