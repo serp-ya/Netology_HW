@@ -1,64 +1,64 @@
 <?php 
-interface MustHave{
-	function getFullDescription();
-	function getDeliverPrice();
-	function getDiscount();
+interface MustHave
+{
+    function getFullDescription();
+    function getDeliverPrice();
+    function getDiscount();
 }
 
-trait Construct{
-	function __construct($name, $type, $price, $title){
-		parent::__construct($name, $price, $title);
-		$this->type = $type;
-	}	
-
+trait Construct
+{
+    function __construct($name, $type, $price, $title)
+    {
+        parent::__construct($name, $price, $title);
+        $this->type = $type;
+    }	
 } 
 
 class Product implements MustHave {
 	
-	protected $value = 10;
+    protected $value = 10;
 
-    public function __construct($name, $price, $title){
+       public function __construct($name, $price, $title)
+       {
         $this->name = $name;
 		$this->price = $price;
-		$this->title = $title;
-		
+		$this->title = $title;		
+       }
+
+    function getDiscount()
+    {
+        if ($this->weight) {
+            if ($this->weight > 10) {
+                return round($this->price -($this->price * $this->value / 100) );
+            }else {
+                return $this->price;
+            }
+			
+        }elseif($this->weight == null) {
+		    return round($this->price -($this->price * $this->value / 100) );
+        }
     }
 
-	function getDiscount(){
-		if ($this->weight) {
-			if ($this->weight > 10) {
-				return round($this->price -($this->price * $this->value / 100) );
-			}else{
-				return $this->price;
-			}
-			
-		}elseif($this->weight == null){
-			return round($this->price -($this->price * $this->value / 100) );
-		}
-	}
+    function getDeliverPrice()
+    {
+        if ($this->getDiscount() == $this->price) {
+            return "250 руб.";
+        }else {
+            return "300 руб.";
+        }
+    } 
 
-	function getDeliverPrice(){
-		if ($this->getDiscount() == $this->price){
-			return "250 руб.";
-		}else{
-			return "300 руб.";
-		}
-
-	} 
-
-	function getFullDescription(){
-		echo "{$this->name} {$this->type} цена  {$this->getDiscount()} руб.  <br/> {$this->title}  <br/> цена доставки {$this->getDeliverPrice()}";
-	}  
-	
+    function getFullDescription()
+    {
+        echo "{$this->name} {$this->type} цена  {$this->getDiscount()} руб.  <br/> {$this->title}  <br/> цена доставки {$this->getDeliverPrice()}";
+    }  
 }
-
-
 
 class SmartPhone extends Product  
 {
-	public $type;
-		
-	use Construct;
+    public $type;		
+    use Construct;
 }
 
 echo "<p>";
@@ -71,13 +71,10 @@ $Iphone = new SmartPhone ("Iphone ", "6 ", "40000  ", "Сделан в Кита�
 $Iphone -> getFullDescription();
 echo "</p>";
 
-
-
 class Spinner extends Product 
 {
-	public $type;
-		
-	use Construct;
+    public $type;		
+    use Construct;
 }
 
 echo "<p>";
@@ -90,20 +87,15 @@ $spiner2 = new Spinner ("Спинер  ", "трехлопастевый ", "1000
 $spiner2 -> getFullDescription();
 echo "</p>";
 
-
-
-
-
 class Cement extends Product 
 {
-	public $weight;
+    public $weight;
 	
-	
-	function __construct($name, $weight, $price, $title){
-		parent::__construct($name, $price, $title);
-		$this->weight = $weight;
-		
-	}	
+    function __construct($name, $weight, $price, $title)
+    {
+        parent::__construct($name, $price, $title);
+        $this->weight = $weight;		
+    }	
 }
 
 echo "<p>";
@@ -115,6 +107,8 @@ echo "<p>";
 $cement2 = new Cement ("Цемент (5 кг) ", "5 кг ", "2000  ", "Сделан во РФ");
 $cement2 -> getFullDescription();
 echo "</p>";
+
+
 
 
 
