@@ -1,10 +1,8 @@
 <?php 
 
 interface FirstInterface
-{
-	
-    public function getParam();
-	
+{	
+    public function getParam();	
 }
 
 class Object implements FirstInterface
@@ -59,10 +57,8 @@ echo $honda->getParam();
 <hr/>
 
 <?php
-
 class Tv extends Object
-{
-	
+{	
     public $quality;
 
     public function __construct($name, $quality)
@@ -87,14 +83,12 @@ echo $tv2->getParam();
 
 ?>
  
- <p>Шариковая ручка</p>
+<p>Шариковая ручка</p>
 <hr/>
 
 <?php 
-
 class Pen extends Object
-{
-	
+{	
     public $inkColor;
 	
     public function __construct($name, $inkColor)
@@ -123,10 +117,8 @@ echo $pen2->getParam();
 <hr/>
 
 <?php
-
 class Duck extends Object
-{
-	
+{	
     public $color;
 	
     public function __construct($name, $color)
