@@ -1,25 +1,36 @@
 <?php 
+
+
+// полчение теста из list.php
+$a = $_GET['testname'];
+$file = file_get_contents($a); 
+$fileDecode = json_decode($file, true);
+
+
 //проверка на прохождение теста
 $var = empty($_POST);
 
+$ot=0;
+$i=1;
 
 if ($var == true) {
 	echo "Вы еще не прошли тест";
 	
 }else{
-	foreach $value['input'] as $key => $it{
-		$ot=0;
-		if ($it['name'] == 'r') {
-			$ot++;
+	foreach ($fileDecode as $value) {
+		foreach ($value['input'] as $key => $it) {
+			if ($_POST[a.$i] == 'r') {
+				$ot++;
+				$i++;
+			}
 		}
-    echo"<center>Вы прошли тест на <strong>$ot</strong> балла </center>";
-    }
-}
 
-// полчение теста из list.php
-$a = $_GET['testname'];
-$file = file_get_contents($a); 
-$fileDecode = json_decode($file, true); 
+	}
+	echo"<center>Вы прошли тест на <strong>$ot</strong> балла </center>";
+} 
+
+
+
  
 /*
 echo '<pre>';
