@@ -7,11 +7,13 @@ if ($var == true) {
 	echo "Вы еще не прошли тест";
 	
 }else{
-	$ot = 0;
-    if ($_POST[a1] == r){$ot++;} else {$not++;}
-    if ($_POST[a2] == r){$ot++;} else {$not++;}
-    if ($_POST[a3] == r){$ot++;} else {$not++;}
+	foreach $value['input'] as $key => $it{
+		$ot=0;
+		if ($it['name'] == 'r') {
+			$ot++;
+		}
     echo"<center>Вы прошли тест на <strong>$ot</strong> балла </center>";
+    }
 }
 
 // полчение теста из list.php
