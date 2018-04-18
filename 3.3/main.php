@@ -40,25 +40,20 @@ $cement2 -> getFullDescription();
 echo "</p>";
 */
 
-
 $order = new \order\order();
 
 $order->addProduct($Sony); //добавляю товар в корзину
 $order->addProduct($Iphone); //добавляю товар в корзину
 $order->addProduct($spiner1); //добавляю товар в корзину
 $order->addProduct($spiner2); //добавляю товар в корзину
- 
 $order->addProduct($cement1); //добавляю товар в корзину
 $order->addProduct($cement2); //добавляю товар в корзину
 
-
- 
- 
 echo '<br>';
  
 $order->showAllProduct();
  
- echo '<br>';
- echo '<br>';
+echo '<br>';
+echo '<br>';
 echo 'На сумму: ' . $order->sum();
 
