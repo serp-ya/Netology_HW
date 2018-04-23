@@ -1,24 +1,24 @@
 <?php 
 namespace product;
 
- abstract class Product implements \Musthave {
+abstract class Product implements \Musthave {
 	
 	public $value = 10;
 	public $name;
 	public $price;
 	public $title;
 
-    public function __construct($name, $price, $title) {
-        $this->name = $name;
+	public function __construct($name, $price, $title) {
+		$this->name = $name;
 		$this->price = $price;
 		$this->title = $title;	
-    }
+	}
 
 	function getDiscount() {
 		if ($this->weight) {
 			if ($this->weight > 10) {
 				return round($this->price -($this->price * $this->value / 100) );
-			}else{
+			}else {
 				return $this->price;
 			}			
 		}elseif($this->weight == null) {
