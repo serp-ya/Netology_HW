@@ -1,6 +1,5 @@
 <?php 
 
-
 // полчение теста из list.php
 $a = $_GET['testname'];
 $file = file_get_contents($a); 
@@ -53,6 +52,7 @@ echo '</pre>';
 </head>
 <body>
 	<p>Решите тест:</p>
+	<?php echo  '<a href="list.php">"Список тестов"</a>';?>
 <form method="POST">
 	
 		<?php foreach ($fileDecode as  $value) { ?>
