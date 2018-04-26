@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "56faa2334d8402fd78d6fc0ab8121cd7",
+    "hash": "aa82e4ff0a0bf066d55e3ba0c8523637",
+    "content-hash": "553c2596fb804b446f51122115e88287",
     "packages": [
         {
             "name": "yandex/geo",
@@ -49,7 +50,7 @@
                 "maps",
                 "yandex"
             ],
-            "time": "2017-05-05T16:54:31+00:00"
+            "time": "2017-05-05 16:54:31"
         }
     ],
     "packages-dev": [],
