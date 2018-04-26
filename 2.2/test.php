@@ -1,77 +1,69 @@
-<?php 
+<?php
 
-// полчение теста из list.php
-$a = $_GET['testname'];
-$file = file_get_contents($a); 
-$fileDecode = json_decode($file, true);
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+session_start();
+$testing = null;
+$testid = null;
+if(isset($_GET['testid'])) {
+  $testJSON =  file_get_contents('tests/'. 'test' . $_GET['testid'] . '.json');
+  $tests = json_decode($testJSON, 'true');
+  $_SESSION['test'] = $tests;
+  $testing = true;
+}
 
-
-//проверка на прохождение теста
-$var = empty($_POST);
-
-$ot=0;
-$i=1;
-
-if ($var == true) {
-	echo "Вы еще не прошли тест";
-	
-}else{
-	foreach ($fileDecode as $value) {
-		foreach ($value['input'] as $key => $it) {
-			if ($_POST[a.$i] == 'r') {
-				$ot++;
-				$i++;
-			}
-		}
-
-	}
-	echo"<center>Вы прошли тест на <strong>$ot</strong> балла </center>";
-} 
-
-
-
- 
-/*
-echo '<pre>';
-var_dump($file);
-echo '</pre>';
-
-echo '<pre>';
-print_r($fileDecode);
-echo '</pre>';
- 
-*/
-
-     
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<title>Тестирование</title>
+    <meta charset="utf-8">
+    <title>Форма теста</title>
+    <style media="screen">
+      form, h1, a {
+        margin: 10px auto;
+        padding: 0 25% 0;
+      }
+      fieldset {
+        margin: 10px auto;
+      }
+      input[value="Отправить"] {
+        margin: 10px auto;
+      }
+    </style>
 </head>
 <body>
-	<p>Решите тест:</p>
-	<?php echo  '<a href="list.php">"Список тестов"</a>';?>
-<form method="POST">
-	
-		<?php foreach ($fileDecode as  $value) { ?>
-		
-		<fieldset>
-
-		<legend><?= $label = $value['question'] ?></legend>
-				
-				<?php foreach ($value['input'] as $key => $it) { ?>
-					<input type="radio" name="<?php echo $it['name']?>" value="<?php echo $it['value']?>">
-				<?= $it['answer'] ?>
-				<?php } ?>
-		
-		</fieldset>
-		
-		<?php }?>
-		
-		<input type="submit" value="Проверить">
-	
-</form>
+  <h1>Ответьте на следющие вопросы</h1>
+  <?php if ($testing == true):?>
+  <?php foreach ($tests as $key => $test):?>
+  <form action="test.php" method="POST">
+    <fieldset>
+      <legend><?php echo $test['q'];?></legend>
+      <?php foreach ($test as $key2 => $value2):?>
+      <?php	if (($key2 !== 'q') && ($key2 !== 'answer')):?>
+      <label><input type="radio" name="<?php echo $key;?>" value="<?php echo $key2;?>"><?php echo $value2;?></label>
+      <?php endif;?>
+      <?php endforeach;?>
+    </fieldset>
+  <?php endforeach;?>
+    <input value="Отправить" type="submit">
+  <?php endif;?>
+  </form>
+  <?php
+    if (isset($_POST[0])) {
+        $tests = $_SESSION['test'];
+        foreach ($tests as $key => $test) {
+            $num = $key + 1;
+            if ($_POST[$key] == $test['answer']) {
+                echo "Ответ на ".$num." вопрос верен."."\n";
+            }
+            else {
+                echo "Ответ на ".$num." вопрос не верен."."\n";
+            }
+        }
+    }
+   ?>
+  <p><a href="list.php">К списку загруженных тестов</a></p>
+  <p><a href="admin.php">К форме загрузки тестов</a></p>
 </body>
 </html>
