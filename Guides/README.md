@@ -3,11 +3,11 @@
 <h2> Установка PHP </h2>
 
 <ol>
-<li><p><a href="https://windows.php.net/download#php-7.2">Скачать</a> архив (Zip)</p>
+<li><p><a href="https://windows.php.net/download#php-7.2">Скачать</a> архив (Zip)</p></li>
 
-    <p>x86 — версия для 32-битной ОС, x64 — 64-битная версия. Из Thread Safe и Non Thread Safe выбираем Thread Safe (c поддержкой многопоточности).</p>
-    <p><img src="img/inst_php.png" alt="" width="50%" height="80%"></p>
-</li>
+<p>x86 — версия для 32-битной ОС, x64 — 64-битная версия. Из Thread Safe и Non Thread Safe выбираем Thread Safe (c поддержкой многопоточности).</p>
+<p><img src="img/inst_php.png" alt="" width="50%" height="80%"></p>
+
 <li>Чтобы установить PHP, просто распакуй скачанный архив в какую нибудь папку без пробелов в имени, например C:\PHP</li>
 <p>Как должно выглядеть: <br>  <br>  <img src="img/php_on_C.png" alt="" width="50%" height="80%"></p>
 <li>Добавить путь к этой папке в переменную окружения Path. Для этого:</li>
@@ -23,6 +23,5 @@
         <li>Прописываем php -v</li>
     </ul>
     <p><img src="img/check.gif" width="50%"  alt=""></p>
-
 
 </ol>
