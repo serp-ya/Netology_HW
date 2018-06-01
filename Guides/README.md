@@ -3,20 +3,15 @@
 <h2> Установка PHP </h2>
 
 <ol>
-    <li>
-        <p><a href="https://windows.php.net/download#php-7.2">Скачать</a> архив (Zip)</p>
+    <li><p><a href="https://windows.php.net/download#php-7.2">Скачать</a> архив (Zip) <br> x86 — версия для 32-битной ОС, x64 — 64-битная версия. Из Thread Safe и Non Thread Safe выбираем Thread Safe (c поддержкой многопоточности). <br> <img src="img/inst_php.png" alt="" width="50%" height="80%"></p></li>
+    <li>Чтобы установить PHP, просто распакуй скачанный архив в какую нибудь папку без пробелов в имени, например C:\PHP <br><br>Как должно выглядеть:  <br>  <img src="img/php_on_C.png" alt="" width="50%" height="80%"></li>
 
-        <p>x86 — версия для 32-битной ОС, x64 — 64-битная версия. Из Thread Safe и Non Thread Safe выбираем Thread Safe (c поддержкой многопоточности).</p>
-        <p><img src="img/inst_php.png" alt="" width="50%" height="80%"></p>
-    </li>
-    <li>Чтобы установить PHP, просто распакуй скачанный архив в какую нибудь папку без пробелов в имени, например C:\PHP</li>
-    <p>Как должно выглядеть: <br> <br> <img src="img/php_on_C.png" alt="" width="50%" height="80%"></p>
     <li>Добавить путь к этой папке в переменную окружения Path. Для этого:</li>
-    <ul>
-        <li>Открываем Панель управления->Система->Дополнительные параметры системы->Переменные среды <br> <br><img src="img/path.gif" width="50%" alt=""></li>
-        <li>Выбераем переменную Path и нажимаем Изменить <br><br> <img src="img/path_2.png" alt=""></li>
-        <li>И создаем путь к нашему распакованному архиву <br><br> <img src="img/add_path.gif" width="50%" alt=""></li>
-    </ul>
+        <ul>
+            <li>Открываем Панель управления->Система->Дополнительные параметры системы->Переменные среды <br> <br><img src="img/path.gif" width="50%" alt=""></li>
+            <li>Выбераем переменную Path и нажимаем Изменить <br><br> <img src="img/path_2.png" alt=""></li>
+            <li>И создаем путь к нашему распакованному архиву <br><br> <img src="img/add_path.gif" width="50%" alt=""></li>
+        </ul>
 
     <li>Проверяем все ли правильно сделали:</li>
     <ul>
