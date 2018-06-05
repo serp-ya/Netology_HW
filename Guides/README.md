@@ -87,7 +87,7 @@
 <p>На этом с установкой все.</p>
 
 <h2>Установка Phpmyadmin</h2>
-<p>Переходим на <img src="https://php-myadmin.ru/download/" alt="">сайт и скачиваем архив.</p>
+<p>Переходим на <a href="https://php-myadmin.ru/download/">сайт</a> и скачиваем архив.</p>
 <p><img src="img/inst_pma.png"  width="50%" height="80%" alt=""></p>
 <p>Файлы из архива распакуем в папку phpmyadmin (c:/server/domains/phpmyadmin)</p>
 <p><img src="img/inst_pma2.png"  width="50%" height="80%" alt=""></p>
