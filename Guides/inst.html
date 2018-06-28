@@ -31,40 +31,7 @@
             <img src="img/inst_php.png" alt="" width="50%" height="80%"></p>
     </li>
     <li>Чтобы установить PHP, просто распакуй скачанный архив в папку php, C:\server\php <br><br>Как должно выглядеть: <br> <img src="img/php_on_C.png" alt="" width="50%" height="70%"></li>
-
 </ol>
-
-<h2> Установка MySQL </h2>
-<ol>
-    <li><p>Переходим на <a href="https://dev.mysql.com/downloads/mysql/">Официальный сайт MySQL</a> и скачиваем MySQLInstaller MSI </p></li>
-    <img src="img/inst_mysql.png" alt="" width="50%" height="80%">
-    <hr>
-    <img src="img/inst_mysql2.png" width="50%" height="80%" alt="">
-    <li>Запускаем установочный файл и выбираем пункт Custom</li>
-    <img src="img/mysql_st1.png" alt="">
-    <li>В следующем окне выбираем MySQL Server, а так же путь к папке mysql </li>
-    <img src="img/mysql_st2.gif" width="50%" height="70%" alt="">
-    <li>Далее игнорируем конфликт путей и проcто нажимаем Next</li>
-    <img src="img/inst_mysql_conflict.png" width="50%" height="80%" alt="">
-    <li>И выполняем установку</li>
-    <p><img src="img/mysql_st3.png" alt=""></p>
-    <p>Далее следует конфигурация нашего MySQL</p>
-    <p>Все разделы оставляем по умолчанию кроме <b>Authentication Method и Accounts and Roles</b></p>
-    <p>В первом случае выбираем второй пункт</p>
-    <p><img src="img/mysql_st4.png"  width="50%" height="80%" alt=""></p>
-    <p>В разделе <b>Accounts and Roles</b> нужно ввести пароль который нужно запомнить! В последующем он нам понадобится для входа в phpmyadmin</p>
-    <p><img src="img/mysql_pass.png" alt=""></p>
-    <p>В конце конфигурирования должно быть так:</p>
-    <p><img src="img/mysql_finish.png"  alt="finish"></p>
-</ol>
-<p>На этом с установкой все.</p>
-
-<h2>Установка Phpmyadmin</h2>
-<p>Переходим на <a href="https://php-myadmin.ru/download/">сайт</a> и скачиваем архив.</p>
-<p><img src="img/inst_pma.png"  width="50%" height="80%" alt=""></p>
-<p>Файлы из архива распакуем в папку phpmyadmin (c:/server/domains/phpmyadmin)</p>
-<p><img src="img/inst_pma2.png"  width="50%" height="80%" alt=""></p>
-<p>Логин для входа - root <br>Пароль - тот который указали при установке MySQL</p>
 
 <h2>Настройка PHP</h2>
 
@@ -103,8 +70,43 @@
 		<p>В консоли выведется: <br><img src="img/php_serv.png" alt=""></p>
 	</li>
 </ul>
-<p>В браузере прописываем http://localhost:8000/index.php и если все сделали правильно, то вы увидите ваш скрипт, который мы создали в самом начале<br><img src="img/php_serv_start.png" alt="" width="50%" height="80%"></p>
+<p>В браузере прописываем http://localhost:8000/index.php и если все сделали правильно, то вы увидите ваш скрипт, который  создали в самом начале<br><img src="img/php_serv_start.png" alt="" width="50%" height="80%"></p>
 <p>Для остановки сервера нажмите сочетание клавиш Ctrl+C</p>
+
+
+<h2> Установка MySQL </h2>
+<ol>
+    <li><p>Переходим на <a href="https://dev.mysql.com/downloads/mysql/">Официальный сайт MySQL</a> и скачиваем MySQLInstaller MSI </p></li>
+    <img src="img/inst_mysql.png" alt="" width="50%" height="80%">
+    <hr>
+    <img src="img/inst_mysql2.png" width="50%" height="80%" alt="">
+    <li>Запускаем установочный файл и выбираем пункт Custom</li>
+    <img src="img/mysql_st1.png" alt="">
+    <li>В следующем окне выбираем MySQL Server, а так же путь к папке mysql </li>
+    <img src="img/mysql_st2.gif" width="50%" height="70%" alt="">
+    <li>Далее игнорируем конфликт путей и проcто нажимаем Next</li>
+    <img src="img/inst_mysql_conflict.png" width="50%" height="80%" alt="">
+    <li>И выполняем установку</li>
+    <p><img src="img/mysql_st3.png" alt=""></p>
+    <p>Далее следует конфигурация нашего MySQL</p>
+    <p>Все разделы оставляем по умолчанию кроме <b>Authentication Method и Accounts and Roles</b></p>
+    <p>В первом случае выбираем второй пункт</p>
+    <p><img src="img/mysql_st4.png"  width="50%" height="80%" alt=""></p>
+    <p>В разделе <b>Accounts and Roles</b> нужно ввести пароль который нужно запомнить! В последующем он нам понадобится для входа в phpmyadmin</p>
+    <p><img src="img/mysql_pass.png" alt=""></p>
+    <p>В конце конфигурирования должно быть так:</p>
+    <p><img src="img/mysql_finish.png"  alt="finish"></p>
+</ol>
+<p>На этом с установкой все.</p>
+
+<h2>Установка Phpmyadmin</h2>
+<p>Переходим на <a href="https://php-myadmin.ru/download/">сайт</a> и скачиваем архив.</p>
+<p><img src="img/inst_pma.png"  width="50%" height="80%" alt=""></p>
+<p>Файлы из архива распакуем в папку phpmyadmin (c:/server/domains/phpmyadmin)</p>
+<p><img src="img/inst_pma2.png"  width="50%" height="80%" alt=""></p>
+<p>Логин для входа - root <br>Пароль - тот который указали при установке MySQL</p>
+
+
 
 <p>Чтобы запустить Phpmyadmin нужо:</p>
 <ul>
